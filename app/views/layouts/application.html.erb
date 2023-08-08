@@ -14,10 +14,13 @@
   </head>
 
   <body>
-    <main>
+    <header>
       <%= render "layouts/navbar" %>
+      <%= render "layouts/flash" %>
+    </header>
+    <main class="py-4">
       <div class="container">
-        <%= yield %>
+          <%= yield %>
       </div>
     </main>
   </body>
