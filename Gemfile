@@ -73,3 +73,4 @@ end
 
 gem "devise"
 gem "noticed"
+gem "ransack", "~> 4.0"
