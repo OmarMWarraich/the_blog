@@ -13,14 +13,6 @@ class User < ApplicationRecord
   
   after_initialize :set_default_role, if: :new_record?
 
-  def self.ransackable_attributes(auth_object = nil)
-    [ "id", "name", "email" ]
-  end
-
-  def self.ransackable_associations(auth_object = nil)
-    ["comments", "notifications", "posts"]
-  end
-
   private
   
   def set_default_role

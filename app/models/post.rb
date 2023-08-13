@@ -10,11 +10,4 @@ class Post < ApplicationRecord
     has_noticed_notifications model_name: 'Notification'
     has_many :notifications, through: :user, dependent: :destroy
 
-    def self.ransackable_attributes(auth_object = nil)
-        [ "id", "updated_at", "views", "title", "body", "content" ]
-    end
-
-    def self.ransackable_associations(auth_object = nil)
-        ["comments", "notifications", "user"]
-    end
 end
