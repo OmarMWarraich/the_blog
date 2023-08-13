@@ -31,7 +31,8 @@ user_id: User.first.id,
 5.times do |j|
 Comment.create(
 content: "This is the body of comment #{j} for post #{i}",
-user_id: User.second.id
+user_id: User.second.id,
+post_id: post.id,
 )
 end
 end
