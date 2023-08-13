@@ -9,12 +9,14 @@ class User < ApplicationRecord
 
   has_many :notifications, as: :recipient, dependent: :destroy
 
-  def self.ransackable_attributes(auth_object = nil)
-    [ "id", "name", "email" ]
-  end
+  enum role: [:user, :admin]
+  
+  after_initialize :set_default_role, if: :new_record?
 
-  def self.ransackable_associations(auth_object = nil)
-    ["comments", "notifications", "posts"]
+  private
+  
+  def set_default_role
+    self.role ||= :user
   end
 
 end
