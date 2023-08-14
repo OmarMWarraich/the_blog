@@ -6,34 +6,34 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-User.create(
-name: "Omar",
-email: "omar@example.com",
-password: "password",
-password_confirmation: "password",
-role: User.roles[:admin],
-)
+User.create(email: 'omar@example.com',
+            password: 'password',
+            password_confirmation: 'password',
+            name: 'Omar',
+            role: User.roles[:admin])
+User.create(email: 'john@doe.com',
+            password: 'password',
+            password_confirmation: 'password',
+            name: 'John Doe')
 
-User.create(
-name: "John",
-email: "john@example.com",
-password: "password",
-password_confirmation: "password",
-)
+elapsed = Benchmark.measure do
+  posts = []
+  omar = User.first
+  john = User.second
+  1000.times do |x|
+    puts "Creating post #{x}"
+    post = Post.new(title: "Title #{x}",
+                    body: "Body #{x} Words go here Idk",
+                    user: omar)
 
-10.times do |i|
-post = Post.create(
-title: "Post #{i}",
-body: "This is the body of post #{i}",
-user_id: User.first.id,
-)
-
-5.times do |j|
-Comment.create(
-content: "This is the body of comment #{j} for post #{i}",
-user_id: User.second.id,
-post_id: post.id,
-)
+    10.times do |y|
+      puts "Creating comment #{y} for post #{x}"
+      post.comments.build(body: "Comment #{y}",
+                          user: john)
+    end
+    posts.push(post)
+  end
+  Post.import(posts, recursive: true)
 end
-end
 
+puts "Elapsed time is #{elapsed.real} seconds"
