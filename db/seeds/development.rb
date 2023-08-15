@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 puts 'Seeding development database...'
-dean = User.first_or_create!(email: 'dean@example.com',
+omar = User.first_or_create!(email: 'omar@example.com',
                              password: 'password',
                              password_confirmation: 'password',
-                             first_name: 'Dean',
-                             last_name: 'DeHart',
+                             first_name: 'Omar',
+                             last_name: 'Warraich',
                              role: User.roles[:admin])
 
 john = User.first_or_create!(email: 'john@doe.com',
@@ -23,7 +23,7 @@ Address.first_or_create!(street: '123 Main St',
                          state: 'CA',
                          zip: '12345',
                          country: 'USA',
-                         user: dean)
+                         user: omar)
 Address.first_or_create(street: '123 Main St',
                         city: 'Anytown',
                         state: 'CA',
@@ -36,7 +36,7 @@ elapsed = Benchmark.measure do
     puts "Creating post #{x}"
     post = Post.new(title: "Title #{x}",
                     body: "Body #{x} Words go here Idk",
-                    user: dean)
+                    user: omar)
 
     5.times do |y|
       puts "Creating comment #{y} for post #{x}"

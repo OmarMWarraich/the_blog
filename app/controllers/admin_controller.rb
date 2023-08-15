@@ -13,6 +13,7 @@ class AdminController < ApplicationController
   end
 
   def show_post
-    @post = Post.includes(:user, :comments [:user, :rich_text_body]).find(params[:id])
+    puts "Params: #{params.inspect}"
+    @post = Post.includes(:user, comments: [:user, :rich_text_body]).find(params[:id])
   end
 end
