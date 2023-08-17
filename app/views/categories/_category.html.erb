@@ -1,0 +1,9 @@
+<div id="<%= dom_id category %>">
+  <h2>
+    <strong>Name:</strong>
+    <%= category.name %>
+  </h2>
+  <% category.posts.includes(:user, :rich_text_body).each do |post| %>
+    <%= render "posts/post", post: post %>
+  <% end %>
+</div>
