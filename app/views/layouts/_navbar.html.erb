@@ -7,7 +7,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <%= link_to "About", about_path, class: "nav-link" %>
+          <%= render 'layouts/categories', categories: @nav_categories %>
         </li>
         <li class="nav-item">
           <%= link_to "Posts", posts_path, class: "nav-link" %>
