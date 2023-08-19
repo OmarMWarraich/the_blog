@@ -8,8 +8,8 @@ Rails.application.routes.draw do
     get 'admin/post/:id', to: 'admin#show_post', as: 'admin_post'
   end
 
-  get 'checkout', to: 'checkout#show'
-  get 'checkout/success', to: 'checkout#success'
+  get 'checkout', to: 'checkouts#show'
+  get 'checkout/success', to: 'checkouts#success'
   get 'billing', to: 'billing#show'
 
   get 'search', to: 'search#index'
