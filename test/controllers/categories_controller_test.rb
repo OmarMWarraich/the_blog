@@ -34,7 +34,8 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update category" do
-    patch category_url(@category), params: { category: { display_in_nav: @category.display_in_nav, name: @category.name } }
+    patch category_url(@category),
+          params: { category: { display_in_nav: @category.display_in_nav, name: @category.name } }
     assert_redirected_to category_url(@category)
   end
 

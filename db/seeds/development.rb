@@ -8,32 +8,32 @@
 puts 'Seeding development database...'
 def seed_users
   omar = User.create(email: 'omar@example.com',
-    password: 'password',
-    password_confirmation: 'password',
-    first_name: 'Omar',
-    last_name: 'Warraich',
-    role: User.roles[:admin])
+                     password: 'password',
+                     password_confirmation: 'password',
+                     first_name: 'Omar',
+                     last_name: 'Warraich',
+                     role: User.roles[:admin])
 
   john = User.create(email: 'john@doe.com',
-    password: 'password',
-    password_confirmation: 'password',
-    first_name: 'John',
-    last_name: 'Doe')
+                     password: 'password',
+                     password_confirmation: 'password',
+                     first_name: 'John',
+                     last_name: 'Doe')
 end
 
 def seed_addresses
   Address.create(street: '123 Main St',
-    city: 'Anytown',
-    state: 'CA',
-    zip: '12345',
-    country: 'USA',
-    user: User.first)
+                 city: 'Anytown',
+                 state: 'CA',
+                 zip: '12345',
+                 country: 'USA',
+                 user: User.first)
   Address.create(street: '123 Main St',
-   city: 'Anytown',
-   state: 'CA',
-   zip: '12345',
-   country: 'USA',
-   user: User.second)
+                 city: 'Anytown',
+                 state: 'CA',
+                 zip: '12345',
+                 country: 'USA',
+                 user: User.second)
 end
 
 def seed_categories
