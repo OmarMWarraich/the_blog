@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-puts 'Seeding development database...'
+
 def seed_users
   omar = User.create(email: 'omar@example.com',
                      password: 'password',
@@ -38,9 +38,10 @@ end
 
 def seed_categories
   Category.create(name: 'Uncategorized', display_in_nav: true)
-  Category.create(name: 'Ruby', display_in_nav: false)
-  Category.create(name: 'Rails', display_in_nav: true)
-  Category.create(name: 'JavaScript', display_in_nav: true)
+  Category.create(name: 'General', display_in_nav: true)
+  Category.create(name: 'Finance', display_in_nav: true)
+  Category.create(name: 'Health', display_in_nav: false)
+  Category.create(name: 'Education', display_in_nav: false)
 end
 
 def seed_posts_and_comments
