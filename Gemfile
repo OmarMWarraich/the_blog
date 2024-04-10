@@ -94,3 +94,5 @@ gem "chartkick", "~> 5.0"
 
 gem "bootstrap", "~> 5.0"
 gem "sassc-rails"
+
+gem "acts_as_list", "~> 1.1"
