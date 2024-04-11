@@ -11,7 +11,7 @@ class PostsController < ApplicationController
     @post.update(views: @post.views + 1)
     @comments = @post.comments.includes(:user, :rich_text_body).order(created_at: :desc)
 
-    ahoy.track "Viewed post", post_id: @post.id
+    ahoy.track "Viewed Post", post_id: @post.id
     mark_notifications_as_read
   end
 
@@ -76,7 +76,7 @@ class PostsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def post_params
-    params.require(:post).permit(:title, :body, :category_id)
+    params.require(:post).permit(:title, :body, :category_id, images)
   end
 
   def mark_notifications_as_read
