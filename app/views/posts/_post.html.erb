@@ -1,5 +1,4 @@
 <div id="<%= dom_id post %>">
-    
     <h2>  
       <%= post.title %>
     </h2>
@@ -9,6 +8,9 @@
     <h6>
       <%= pluralize(post.views, "view") %>
     </h6>
+    <% post.images.each do |image| %>
+      <%= image_tag(image, style:"width:300px; height: auto")%>
+    <% end %>
     <div>
       <%= post.body %>
     </div>
