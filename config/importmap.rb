@@ -11,3 +11,5 @@ pin 'chartkick', to: 'chartkick.js'
 pin 'Chart.bundle', to: 'Chart.bundle.js'
 pin "popper", to: 'popper.js', preload: true
 pin "bootstrap", to: 'bootstrap.min.js', preload: true
+pin "picmo", to: "https://ga.jspm.io/npm:picmo@5.8.5/dist/index.js"
+pin "@picmo/popup-picker", to: "https://ga.jspm.io/npm:@picmo/popup-picker@5.8.5/dist/index.js"
