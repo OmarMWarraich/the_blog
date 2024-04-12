@@ -56,10 +56,9 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 The Blog <a name="about-project"></a>
 
-This feature-rich blog offers an engaging user experience. User Authentication and ActionText for posts and comments, complemented by notifications, drive user management. A live search bar enhances usability, while an admin dashboard with visual graphs tracks views and statistics. Admins can showcase their projects through user profiles, and the projects support drag-and-drop uploads as well as can be dragged and replaced themselves with each other. Subscription features enable monetization and robust content management. Overall, these features create a dynamic and user-friendly blogging platform.
-Built with: (Ruby on Rails, Bootstrap, Sassc_Rails, Postgresql, Heroku, Devise, Noticed, Ransack, Bullet, Wicked, Stripe, Pay, Ahoy_Matey, Chartkick, Acts_As_List, Whenever)
+This feature-rich blog, powered by Ruby on Rails, Bootstrap, and Sassc_Rails, offers an engaging user experience. User Authentication and ActionText for posts and comments, complemented by notifications, drive user engagement. A live search bar enhances usability, while an admin dashboard with visual graphs tracks views and statistics. Admins can showcase their projects through user profiles, and both posts and projects support drag-and-drop uploads. Subscription features, integrated with Stripe and Pay, enable monetization and robust content management. Technologies like Postgresql, Heroku, Devise, Noticed, Ransack, Bullet, Wicked, Ahoy_Matey, Chartkick, Acts_As_List, and Whenever ensure efficient performance and scalability. Together, these elements create a dynamic and user-friendly blogging platform.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -146,10 +145,12 @@ Install this project with:
 
 Add the following to the credentials.yml file.
 
-stripe:
-public_key: "your_stripe_publishable_key"
-private_key: "your_stripe_private_key"
-signing_secret: "your_stripe_signing_secret"
+```sh
+  stripe:
+    public_key: "your_stripe_publishable_key"
+    private_key: "your_stripe_private_key"
+    signing_secret: "your_stripe_signing_secret"
+```
 
 Save the file and exit.
 
@@ -161,18 +162,6 @@ To run the project, execute the following command:
   rails server
 ```
 
-### Run tests
-
-To run tests, run the following command:
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
-
 ### Deployment
 
 You can deploy this project following this [documentation](https://devcenter.heroku.com/articles/getting-started-with-rails7).
@@ -183,9 +172,9 @@ You can deploy this project following this [documentation](https://devcenter.her
 
 ## 👥 Author <a name="authors"></a>
 
-- GitHub: [@githubhandle](https://github.com/OmarMWarraich)
-- Twitter: [@twitterhandle](https://twitter.com/@omarwarraich1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/o-va)
+- GitHub: [OmarMWarraich](https://github.com/OmarMWarraich)
+- Twitter: [@omarwarraich1](https://twitter.com/@omarwarraich1)
+- LinkedIn: [o-va](https://linkedin.com/in/o-va)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -221,7 +210,7 @@ If you like this project please give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank every one whose code was used.
+I would like to thank anyone whose code was used.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -231,7 +220,7 @@ I would like to thank every one whose code was used.
 
 - How can I run this project on my local machine?
 
-  - Carefully, follow all the instructions in this README. You must have Rails7+ and Ruby3+ installed in your machine.
+  - Carefully, follow all the instructions in this README. You must have Rails7+ and Ruby3+ installed.
 
 - How can I deploy this project?
 
@@ -244,7 +233,5 @@ I would like to thank every one whose code was used.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
